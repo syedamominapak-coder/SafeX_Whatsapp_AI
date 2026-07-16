@@ -1,0 +1,1260 @@
+/* ==========================================================
+   SafeX AI Support Suite
+   Enterprise SaaS Theme
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F8FAFC;
+}
+
+.stApp{
+
+background:
+radial-gradient(circle at top left,#EAF3FF 0%,transparent 35%),
+radial-gradient(circle at top right,#F5ECFF 0%,transparent 30%),
+#F8FAFC;
+
+}
+
+/* =========================
+   STREAMLIT CLEANUP
+========================= */
+
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}
+
+header{
+    visibility:hidden;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.main .block-container{
+
+padding-top:2rem;
+
+padding-left:2.8rem;
+
+padding-right:2.8rem;
+
+padding-bottom:3rem;
+
+max-width:1500px;
+
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+section[data-testid="stSidebar"]{
+
+background:linear-gradient(
+180deg,
+#08162D,
+#0F172A
+);
+
+border-right:none;
+
+}
+
+section[data-testid="stSidebar"] *{
+
+color:white;
+
+}
+
+section[data-testid="stSidebar"] .stButton>button{
+
+background:transparent;
+
+border:none;
+
+text-align:left;
+
+box-shadow:none;
+
+color:white;
+
+font-weight:500;
+
+}
+
+section[data-testid="stSidebar"] .stButton>button:hover{
+
+background:rgba(255,255,255,.08);
+
+transform:none;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+padding:65px;
+
+border-radius:36px;
+
+background:
+
+linear-gradient(
+135deg,
+#2563EB,
+#4F46E5,
+#7C3AED
+);
+
+box-shadow:
+
+0 30px 60px rgba(37,99,235,.25);
+
+margin-bottom:40px;
+
+color:white;
+
+}
+
+/* glow */
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:-80px;
+
+right:-60px;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:
+
+rgba(255,255,255,.12);
+
+}
+
+/* second glow */
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+bottom:-120px;
+
+left:-120px;
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+background:
+
+rgba(255,255,255,.08);
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+font-weight:800;
+
+margin-bottom:5px;
+
+}
+
+.hero h3{
+
+font-weight:400;
+
+opacity:.92;
+
+margin-top:0;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:720px;
+
+opacity:.95;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.stButton>button{
+
+border:none;
+
+border-radius:14px;
+
+padding:.8rem 1.3rem;
+
+background:
+
+linear-gradient(
+135deg,
+#2563EB,
+#4F46E5
+);
+
+color:white;
+
+font-weight:600;
+
+font-size:15px;
+
+transition:.30s;
+
+}
+
+.stButton>button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+
+0 15px 35px rgba(37,99,235,.30);
+
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.stTextInput input{
+
+border-radius:14px;
+
+border:1px solid #E2E8F0;
+
+padding:15px;
+
+background:white;
+
+}
+
+.stTextArea textarea{
+
+border-radius:14px;
+
+}
+
+/* =========================
+   METRICS
+========================= */
+
+[data-testid="metric-container"]{
+
+background:white;
+
+border-radius:22px;
+
+padding:20px;
+
+border:1px solid #EDF2F7;
+
+box-shadow:
+
+0 10px 30px rgba(15,23,42,.05);
+
+transition:.3s;
+
+}
+
+[data-testid="metric-container"]:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 25px 45px rgba(15,23,42,.08);
+
+}
+
+/* metric number */
+
+[data-testid="stMetricValue"]{
+
+font-size:36px;
+
+font-weight:700;
+
+color:#2563EB;
+
+}
+
+/* metric label */
+
+[data-testid="stMetricLabel"]{
+
+font-weight:600;
+
+}
+
+/* =========================
+   DIVIDERS
+========================= */
+
+hr{
+
+border:none;
+
+height:1px;
+
+background:#E2E8F0;
+
+margin:35px 0;
+
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1{
+
+font-weight:800;
+
+}
+
+h2{
+
+font-weight:700;
+
+color:#0F172A;
+
+}
+
+h3{
+
+font-weight:600;
+
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a{
+
+text-decoration:none;
+
+color:#2563EB;
+
+}
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card{
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.45);
+
+border-radius:24px;
+
+padding:28px;
+
+margin-bottom:22px;
+
+box-shadow:
+0 12px 35px rgba(15,23,42,.06);
+
+transition:all .35s ease;
+
+height:100%;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 24px 55px rgba(37,99,235,.18);
+
+border:1px solid rgba(37,99,235,.20);
+
+}
+
+.card h3{
+
+margin-top:0;
+
+font-size:22px;
+
+color:#0F172A;
+
+}
+
+.card p{
+
+color:#475569;
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.card ul{
+
+padding-left:18px;
+
+}
+
+.card li{
+
+margin-bottom:10px;
+
+color:#475569;
+
+}
+
+/* ==========================================================
+   CHAT
+========================================================== */
+
+.user-message{
+
+background:linear-gradient(
+135deg,
+#2563EB,
+#4F46E5
+);
+
+color:white;
+
+padding:18px;
+
+border-radius:22px 22px 6px 22px;
+
+margin:12px 0;
+
+width:fit-content;
+
+max-width:75%;
+
+margin-left:auto;
+
+box-shadow:
+0 12px 25px rgba(37,99,235,.22);
+
+}
+
+.bot-message{
+
+background:white;
+
+padding:18px;
+
+border-radius:22px 22px 22px 6px;
+
+margin:12px 0;
+
+max-width:75%;
+
+width:fit-content;
+
+border:1px solid #E2E8F0;
+
+box-shadow:
+0 10px 25px rgba(15,23,42,.05);
+
+}
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.badge{
+
+display:inline-block;
+
+padding:7px 14px;
+
+border-radius:999px;
+
+font-size:12px;
+
+font-weight:600;
+
+margin-top:10px;
+
+}
+
+.badge-faq{
+
+background:#DBEAFE;
+
+color:#1D4ED8;
+
+}
+
+.badge-ai{
+
+background:#F3E8FF;
+
+color:#7E22CE;
+
+}
+
+.badge-lead{
+
+background:#DCFCE7;
+
+color:#15803D;
+
+}
+
+.badge-human{
+
+background:#FEE2E2;
+
+color:#B91C1C;
+
+}
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+table{
+
+border-collapse:collapse;
+
+border-radius:18px;
+
+overflow:hidden;
+
+}
+
+thead tr{
+
+background:#2563EB;
+
+color:white;
+
+}
+
+tbody tr{
+
+background:white;
+
+}
+
+tbody tr:nth-child(even){
+
+background:#F8FAFC;
+
+}
+
+th{
+
+padding:14px;
+
+font-weight:600;
+
+}
+
+td{
+
+padding:14px;
+
+}
+
+/* ==========================================================
+   DATAFRAME
+========================================================== */
+
+[data-testid="stDataFrame"]{
+
+border-radius:22px;
+
+overflow:hidden;
+
+border:1px solid #E2E8F0;
+
+box-shadow:
+0 12px 35px rgba(15,23,42,.06);
+
+}
+
+/* ==========================================================
+   SELECTBOX
+========================================================== */
+
+.stSelectbox{
+
+margin-bottom:10px;
+
+}
+
+.stSelectbox div{
+
+border-radius:14px;
+
+}
+
+/* ==========================================================
+   SUCCESS / INFO
+========================================================== */
+
+.stSuccess{
+
+border-radius:18px;
+
+}
+
+.stInfo{
+
+border-radius:18px;
+
+}
+
+.stWarning{
+
+border-radius:18px;
+
+}
+
+.stError{
+
+border-radius:18px;
+
+}
+
+/* ==========================================================
+   EXPANDER
+========================================================== */
+
+.streamlit-expanderHeader{
+
+font-weight:600;
+
+font-size:16px;
+
+}
+
+.streamlit-expander{
+
+border-radius:18px;
+
+}
+
+/* ==========================================================
+   PROGRESS
+========================================================== */
+
+.stProgress>div>div{
+
+background:linear-gradient(
+90deg,
+#2563EB,
+#4F46E5
+);
+
+}
+
+/* ==========================================================
+   CHAT INPUT
+========================================================== */
+
+.stChatInput{
+
+border-radius:20px;
+
+}
+
+.stChatInput textarea{
+
+border-radius:20px;
+
+padding:15px;
+
+}
+
+/* ==========================================================
+   FILE UPLOADER
+========================================================== */
+
+[data-testid="stFileUploader"]{
+
+border-radius:20px;
+
+border:2px dashed #CBD5E1;
+
+padding:20px;
+
+background:white;
+
+}
+
+/* ==========================================================
+   PLOTLY
+========================================================== */
+
+.js-plotly-plot{
+
+border-radius:22px;
+
+background:white;
+
+padding:10px;
+
+box-shadow:
+0 12px 30px rgba(15,23,42,.06);
+
+}
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+.stTabs [role="tab"]{
+
+border-radius:14px;
+
+padding:12px 22px;
+
+font-weight:600;
+
+}
+
+.stTabs [aria-selected="true"]{
+
+background:#2563EB;
+
+color:white;
+
+}
+
+/* ==========================================================
+   KPI ICON CIRCLE
+========================================================== */
+
+.icon-circle{
+
+width:64px;
+
+height:64px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(
+135deg,
+#2563EB,
+#7C3AED
+);
+
+color:white;
+
+font-size:28px;
+
+margin-bottom:18px;
+
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.section-title{
+
+font-size:34px;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+color:#0F172A;
+
+}
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+@keyframes pulseGlow{
+
+0%{
+
+box-shadow:0 0 0 rgba(37,99,235,.15);
+
+}
+
+50%{
+
+box-shadow:0 0 40px rgba(37,99,235,.28);
+
+}
+
+100%{
+
+box-shadow:0 0 0 rgba(37,99,235,.15);
+
+}
+
+}
+
+.hero{
+
+animation:fadeUp .7s ease;
+
+}
+
+.card{
+
+animation:fadeUp .6s ease;
+
+}
+
+.hero img{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   HOVER EFFECTS
+========================================================== */
+
+.stMetric{
+
+transition:.3s;
+
+}
+
+.stMetric:hover{
+
+transform:translateY(-5px);
+
+}
+
+button{
+
+transition:.3s;
+
+}
+
+button:hover{
+
+cursor:pointer;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#EEF2FF;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+180deg,
+#2563EB,
+#7C3AED
+);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#2563EB;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+margin-top:60px;
+
+padding:30px;
+
+text-align:center;
+
+background:white;
+
+border-radius:24px;
+
+border:1px solid #E2E8F0;
+
+box-shadow:
+0 10px 30px rgba(15,23,42,.05);
+
+color:#64748B;
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+/* ==========================================================
+   INFO PANELS
+========================================================== */
+
+.info-panel{
+
+background:linear-gradient(
+135deg,
+#EEF4FF,
+#F8FAFF
+);
+
+border:1px solid #D6E4FF;
+
+border-radius:22px;
+
+padding:24px;
+
+margin-bottom:20px;
+
+}
+
+.info-panel h3{
+
+margin-top:0;
+
+color:#1E3A8A;
+
+}
+
+/* ==========================================================
+   FEATURE GRID
+========================================================== */
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:20px;
+
+margin-top:25px;
+
+}
+
+/* ==========================================================
+   STATUS BADGES
+========================================================== */
+
+.status-success{
+
+background:#DCFCE7;
+
+color:#166534;
+
+padding:6px 14px;
+
+border-radius:999px;
+
+font-weight:600;
+
+display:inline-block;
+
+}
+
+.status-warning{
+
+background:#FEF3C7;
+
+color:#92400E;
+
+padding:6px 14px;
+
+border-radius:999px;
+
+font-weight:600;
+
+display:inline-block;
+
+}
+
+.status-error{
+
+background:#FEE2E2;
+
+color:#991B1B;
+
+padding:6px 14px;
+
+border-radius:999px;
+
+font-weight:600;
+
+display:inline-block;
+
+}
+
+/* ==========================================================
+   CHAT AVATAR
+========================================================== */
+
+.avatar{
+
+width:42px;
+
+height:42px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-weight:700;
+
+color:white;
+
+background:linear-gradient(
+135deg,
+#2563EB,
+#7C3AED
+);
+
+}
+
+/* ==========================================================
+   GLASS PANEL
+========================================================== */
+
+.glass{
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.45);
+
+border-radius:24px;
+
+padding:25px;
+
+box-shadow:
+0 15px 35px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1200px){
+
+.hero{
+
+padding:45px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+}
+
+@media (max-width:900px){
+
+.main .block-container{
+
+padding-left:1rem;
+
+padding-right:1rem;
+
+}
+
+.hero{
+
+padding:35px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.card{
+
+padding:20px;
+
+}
+
+}
+
+@media (max-width:600px){
+
+.hero{
+
+border-radius:22px;
+
+padding:25px;
+
+}
+
+.hero h1{
+
+font-size:26px;
+
+}
+
+.hero h3{
+
+font-size:18px;
+
+}
+
+[data-testid="metric-container"]{
+
+padding:16px;
+
+}
+
+.footer{
+
+padding:20px;
+
+font-size:13px;
+
+}
+
+}
+
+/* ==========================================================
+   END
+========================================================== */
