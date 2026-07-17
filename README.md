@@ -199,6 +199,65 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 ---
+<p>
+                            USER
+                          │
+                          │
+                  WhatsApp Message
+                          │
+                          ▼
+               ┌────────────────────┐
+               │ Twilio WhatsApp API│
+               │ Sandbox / Business │
+               └────────────────────┘
+                          │
+                Webhook (POST Request)
+                          │
+                          ▼
+              Flask / FastAPI Backend
+                    (Python Server)
+                          │
+          ┌───────────────┼────────────────┐
+          │               │                │
+          ▼               ▼                ▼
+ Language Detection   Message Cleaning   Logging
+      (langdetect)     preprocessing      (optional)
+          │
+          ▼
+ Language Translator
+ (deep-translator /
+ Google Translate)
+          │
+          ▼
+ FAQ Search Engine
+(TF-IDF Vectorizer)
+          │
+          ▼
+Cosine Similarity Search
+(scikit-learn)
+          │
+     Highest Similarity
+          │
+          ▼
+ Confidence Check
+      │          │
+      │          │
+High Score   Low Score
+      │          │
+      ▼          ▼
+ Return FAQ    Fallback Response
+      │
+      ▼
+HubSpot CRM Integration
+(Store contact +
+conversation)
+      │
+      ▼
+ Twilio WhatsApp API
+      │
+      ▼
+ User Receives Reply
+</p>
 
 ## 📄 License
 
